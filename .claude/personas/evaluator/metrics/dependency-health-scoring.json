@@ -1,0 +1,70 @@
+{
+  "metric_name": "dependency_health",
+  "weight": 0.33,
+  "enabled": true,
+  "base_score": 100,
+  "grade_thresholds": {
+    "A": 90,
+    "B": 80,
+    "C": 70,
+    "D": 60,
+    "F": 0
+  },
+  "criteria": {
+    "outdated_major": {
+      "threshold": 0,
+      "severity": "critical",
+      "points_deduction": 20,
+      "description": "Packages with major version updates available (e.g., 1.x.x → 2.x.x)"
+    },
+    "outdated_minor": {
+      "threshold": 3,
+      "severity": "warning",
+      "points_deduction": 5,
+      "description": "Packages more than 3 minor versions behind (e.g., 1.1.x → 1.5.x)"
+    },
+    "outdated_patch": {
+      "threshold": 5,
+      "severity": "info",
+      "points_deduction": 2,
+      "description": "Packages more than 5 patch versions behind (e.g., 1.1.1 → 1.1.8)"
+    },
+    "security_vulnerabilities": {
+      "threshold": 0,
+      "severity": "critical",
+      "points_deduction_per_vuln": {
+        "critical": 25,
+        "high": 15,
+        "moderate": 8,
+        "low": 3
+      },
+      "description": "Security vulnerabilities found in dependencies"
+    }
+  },
+  "framework_detection": {
+    "dotnet": {
+      "files": ["*.csproj", "*.sln"],
+      "dependency_check": "dotnet list package --outdated",
+      "vulnerability_check": "dotnet list package --vulnerable --include-transitive",
+      "list_packages": "dotnet list package --include-transitive"
+    },
+    "nodejs": {
+      "files": ["package.json"],
+      "dependency_check": "npm outdated --json",
+      "vulnerability_check": "npm audit --json",
+      "list_packages": "npm list --json"
+    },
+    "python": {
+      "files": ["requirements.txt", "pyproject.toml", "setup.py"],
+      "dependency_check": "pip list --outdated --format=json",
+      "vulnerability_check": "pip-audit --format=json",
+      "list_packages": "pip list --format=json"
+    },
+    "java": {
+      "files": ["pom.xml", "build.gradle"],
+      "dependency_check": "mvn versions:display-dependency-updates",
+      "vulnerability_check": "mvn dependency-check:check",
+      "list_packages": "mvn dependency:list"
+    }
+  }
+}

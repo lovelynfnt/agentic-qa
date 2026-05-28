@@ -1,0 +1,15 @@
+{
+  "metric_name": "test_performance",
+  "weight": 0.33,
+  "enabled": false,
+  "base_score": 100,
+  "grade_thresholds": {
+    "A": 90,
+    "B": 80,
+    "C": 70,
+    "D": 60,
+    "F": 0
+  },
+  "criteria": {},
+  "note": "Test Performance metric coming soon"
+}

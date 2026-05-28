@@ -1,0 +1,57 @@
+# Evaluation results (can be committed if desired for demo purposes)
+.claude/evaluations/*.md
+.claude/evaluations/history/*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Node modules (if examples are added)
+node_modules/
+
+# Python (if examples are added)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# .NET (if examples are added)
+bin/
+obj/
+*.user
+*.suo
+
+# Test results (if examples are added)
+TestResults/
+test-results/
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Documentation build artifacts
+docs/_build/
+site/

@@ -1,0 +1,15 @@
+{
+  "metric_name": "code_quality",
+  "weight": 0.34,
+  "enabled": false,
+  "base_score": 100,
+  "grade_thresholds": {
+    "A": 90,
+    "B": 80,
+    "C": 70,
+    "D": 60,
+    "F": 0
+  },
+  "criteria": {},
+  "note": "Code Quality metric coming soon"
+}
