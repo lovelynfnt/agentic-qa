@@ -3,7 +3,6 @@
 > AI-powered test automation quality evaluator - Assess your test automation projects with structured, repeatable evaluations
 
 [![Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-8A2BE2)](https://claude.ai/code)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 
 **Agentic QA** is a specialized evaluation tool for test automation projects. It provides comprehensive, structured assessments of test automation quality across multiple dimensions, helping teams identify issues and track improvements over time.
