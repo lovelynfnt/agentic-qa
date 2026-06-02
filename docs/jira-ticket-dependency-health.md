@@ -86,8 +86,8 @@ Before evaluation can run, the metric validates:
 - [x] **Handles errors gracefully** - if CLI tool missing, shows helpful error message with installation instructions
   
 - [x] **Generates both outputs:**
-  - Markdown report: `.claude/evaluations/[timestamp]_dependency-health.md`
-  - JSON history: `.claude/evaluations/history/[timestamp]_dependency-health.json`
+  - Markdown report: `.claude/evaluations/[timestamp]_[project-name]_dependency-health.md`
+  - JSON history: `.claude/evaluations/history/[timestamp]_[project-name]_dependency-health.json`
   
 - [ ] **Reports are accurate** - all findings match actual CLI output
   - **Action:** Compare report findings to manual `dotnet list package --outdated` run
@@ -339,46 +339,3 @@ Before evaluation can run, the metric validates:
 - Comparison across multiple projects
 
 ---
-
-### Demo Script
-
-**When ready to demo to team:**
-
-1. **Setup (2 min)**
-   - cd to agentic-qa directory
-   - Open terminal, run `claude`
-
-2. **Show evaluation request (1 min)**
-   - Type: "Evaluate this project C:\Path\to\BusinessCentralAutomation"
-   - Show banner appears (🤖 Test Automation Evaluator v1.0)
-
-3. **Show pre-check (1 min)**
-   - Show project type detection
-   - Show test count
-   - Show protocol status footer
-
-4. **Show metric selection (1 min)**
-   - Show question with 4 options
-   - Select "Dependency Health"
-
-5. **Show pre-check validation (1 min)**
-   - Show .csproj validation
-   - Show dotnet CLI check
-
-6. **Show evaluation running (2 min)**
-   - Watch as it runs commands
-   - Show progress
-
-7. **Show results (3 min)**
-   - Show score and grade
-   - Show critical issues
-   - Show specific commands
-   - Open generated markdown report
-   - Show JSON history file
-
-8. **Q&A (5 min)**
-   - Take questions
-   - Discuss scoring fairness
-   - Get feedback
-
-**Total time: ~15 minutes**

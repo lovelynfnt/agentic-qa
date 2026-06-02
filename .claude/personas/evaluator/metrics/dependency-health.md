@@ -352,8 +352,8 @@ Display results in this format:
 
 **Grade:** [A/B/C/D/F] based on score
 
-📊 Detailed report saved to: .claude/evaluations/[timestamp]_dependency-health.md
-📈 History saved to: .claude/evaluations/history/[timestamp]_dependency-health.json
+📊 Detailed report saved to: .claude/evaluations/[timestamp]_[project-name]_dependency-health.md
+📈 History saved to: .claude/evaluations/history/[timestamp]_[project-name]_dependency-health.json
 
 Would you like me to:
 • Help you fix these issues
@@ -373,7 +373,9 @@ Would you like me to:
 
 ### 5.2 Detailed Markdown Report
 
-Generate and save detailed report to: `.claude/evaluations/[YYYY-MM-DD_HHMMSS]_dependency-health.md`
+Generate and save detailed report to: `.claude/evaluations/[YYYY-MM-DD_HHMMSS]_[project-name]_dependency-health.md`
+
+Where `[project-name]` is derived from the project path (use the last directory name, sanitized for filename safety).
 
 **Report Structure:**
 
@@ -575,7 +577,9 @@ Generate and save detailed report to: `.claude/evaluations/[YYYY-MM-DD_HHMMSS]_d
 
 ### 5.3 Save Evaluation History (JSON)
 
-Save complete evaluation data to: `.claude/evaluations/history/[YYYY-MM-DD_HHMMSS]_dependency-health.json`
+Save complete evaluation data to: `.claude/evaluations/history/[YYYY-MM-DD_HHMMSS]_[project-name]_dependency-health.json`
+
+Where `[project-name]` is derived from the project path (use the last directory name, sanitized for filename safety).
 
 ```json
 {
