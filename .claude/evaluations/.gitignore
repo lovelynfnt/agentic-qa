@@ -1,5 +1,5 @@
 # Evaluation results (can be committed if desired)
-*.md
+# *.md
 history/*.json
 
 # Uncomment to commit evaluation reports
