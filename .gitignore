@@ -1,6 +1,6 @@
 # Evaluation results (can be committed if desired for demo purposes)
-.claude/evaluations/*.md
-.claude/evaluations/history/*.json
+# .claude/evaluations/*.md           # Temporarily commented to commit sample results
+.claude/evaluations/history/*.json   # Keep JSON files private
 
 # IDE
 .vscode/

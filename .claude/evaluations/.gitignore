@@ -1,6 +1,6 @@
 # Evaluation results (can be committed if desired)
-# *.md
-history/*.json
+# *.md              # Temporarily commented to commit sample results
+history/*.json      # Keep JSON files private
 
 # Uncomment to commit evaluation reports
 # !*.md
